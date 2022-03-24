@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 3rem;
+  column-gap: 3rem;
+  padding: 3rem;
+  height: fit-content;
+  width: fit-content;
+}

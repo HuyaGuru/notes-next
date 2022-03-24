@@ -1,0 +1,111 @@
+.container {
+  padding: 0% 3%;
+  color: var(--on-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--neutral20-20p);
+  height: 3rem;
+  box-shadow: 0px 2px 4px var(--shadow1);
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 1;
+}
+.brand_tag {
+  font-size: var(--headline-small-fs);
+  font-weight: 400;
+}
+.link_list,
+.link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.link {
+  padding: 0 1rem;
+  column-gap: 1rem;
+  position: relative;
+  cursor: pointer;
+}
+.link:hover,
+.link:focus-within {
+  background-color: var(--neutral20-70p);
+}
+.link:focus-within .sign_in,
+.link:hover .sign_in {
+  display: flex;
+}
+.sign_in {
+  margin: 0 2rem;
+  background-color: var(--neutral20);
+  color: var(--on-background);
+  width: 5rem;
+  height: fit-content;
+  --padding: 0.5rem;
+  padding: var(--padding);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  border-radius: var(--border-radius);
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline-end: 0%;
+  transform: translateX(10%);
+  box-shadow: 0px 0px 8px var(--shadow5);
+  row-gap: 0.5rem;
+}
+.sign_in::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 15px;
+  background-color: var(--neutral20);
+  inset-block-start: -13%;
+  inset-inline-start: calc(50% - var(--padding));
+  clip-path: polygon(50% 0%, 0 50%, 100% 50%);
+  z-index: 0;
+}
+.with {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  color: var(--outline);
+  font-size: var(--label-small-fs);
+  font-weight: var(--label-small-fw);
+  letter-spacing: var(--label-small-ls);
+}
+.with::after,
+.with::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 20%;
+  background-color: var(--outline);
+  inset-block-start: 50%;
+}
+.with::after {
+  inset-inline-end: 0;
+}
+.with::before {
+  inset-inline-start: 0;
+}
+.sign_in_button {
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.sign_in_button:hover,
+.sign_in_button:focus-visible {
+  outline: 1px solid var(--neutral-variant80);
+}
+.sign_in_button:active {
+  outline-color: var(--neutral-variant80-70p);
+}
+.user_icon {
+  border-radius: 1rem;
+}
+.no_whitespace {
+  white-space: nowrap;
+}

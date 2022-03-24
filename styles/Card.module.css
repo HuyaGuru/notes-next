@@ -1,0 +1,71 @@
+.container {
+  color: var(--on-background);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  height: 24vh;
+  min-height: 10rem;
+  width: 15rem;
+  border: 1px var(--outline) solid;
+  box-shadow: 0px 0px 8px var(--shadow5);
+}
+.center {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+.title {
+  font-size: var(--title-medium-fs);
+  font-weight: var(--title-medium-fw);
+}
+.sub_text {
+  color: var(--on-surface-variant);
+  font-size: var(--body-medium-fs);
+  font-weight: var(--body-medium-fw);
+  line-height: var(--body-medium-lh);
+  letter-spacing: var(--body-medium-ls);
+}
+.footer {
+  padding-inline-start: 1rem;
+  padding-inline-end: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-start: auto;
+}
+.date {
+  font-size: var(--body-small-fs);
+  font-weight: var(--body-small-fw);
+  line-height: var(--body-small-lh);
+  letter-spacing: var(--body-small-ls);
+  color: var(--outline);
+}
+.options {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  align-items: center;
+  transition-property: visibility, opacity;
+  transition-duration: 250ms;
+}
+.button {
+  height: 36px;
+  width: 36px;
+}
+.container:focus-within .footer,
+.container:hover .footer {
+  background: linear-gradient(0deg, var(--outline-10p), var(--background));
+}
+.container:focus-within .options,
+.container:hover .options {
+  visibility: visible;
+  opacity: 1;
+}
+.button:hover {
+  outline: 1px solid var(--neutral-variant80);
+  border-radius: var(--border-radius);
+}
+.button:active {
+  outline-color: var(--neutral-variant80-70p);
+}
