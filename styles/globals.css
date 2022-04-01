@@ -30,8 +30,10 @@
   --display-small: 2.25rem;
   --headline-small-fs: 1.5rem;
   --title-large-fs: 1.375rem;
+  /* title medium */
   --title-medium-fs: 1rem;
   --title-medium-fw: 500;
+  /* title small */
   --title-small-fs: 0.875rem;
   --title-small-fw: 500;
   /* label large */
@@ -60,6 +62,8 @@
 }
 body,
 button,
+input,
+textarea,
 h1,
 h2,
 p {
@@ -70,12 +74,17 @@ a {
   color: inherit;
   text-decoration: none;
 }
-button {
+button,
+input,
+textarea {
   background-color: transparent;
   border: none;
   font-family: inherit;
   color: inherit;
   font-size: inherit;
+}
+textarea {
+  resize: none;
 }
 button:hover {
   cursor: pointer;
